@@ -3,9 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Best Cloud Hosting for Non-Technical Users & Agencies 2025 | Managed Cloud Solutions</title>
-    <meta name="description" content="Discover the best cloud hosting for non-technical users and agencies in 2025. Get managed cloud hosting with one-click deployment, 24/7 support, and enterprise features without complexity. Perfect for beginners and digital agencies.">
+    <title>Best Cloud Hosting for Non-Technical Users 2025</title>
+    <meta name="description" content="Discover the best cloud hosting for non-technical users and agencies in 2025. Get managed hosting with one-click deployment and 24/7 support.">
+    <meta name="robots" content="index, follow">
     <meta name="keywords" content="best cloud hosting 2025, cloud hosting for non-technical users, managed cloud hosting agencies, beginner-friendly cloud hosting, WordPress cloud hosting 2025, VPS hosting alternative, managed server hosting">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style">
     
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Best Cloud Hosting for Non-Technical Users & Agencies 2025">
@@ -51,6 +56,33 @@
     <style>
         .hover\:scale-102:hover {
             transform: scale(1.02);
+        }
+        .youtube-placeholder {
+            background: linear-gradient(45deg, #ff0000, #cc0000);
+            cursor: pointer;
+            position: relative;
+        }
+        .youtube-placeholder::before {
+            content: '▶';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 4rem;
+            color: white;
+            z-index: 2;
+        }
+        .youtube-placeholder::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+            background: rgba(0,0,0,0.8);
+            border-radius: 50%;
+            z-index: 1;
         }
     </style>
 </head>
@@ -98,12 +130,14 @@
 
     <!-- Hero Section -->
     <section class="pt-32 pb-24 relative overflow-hidden">
-        <!-- Background Image -->
+        <!-- Background Image with lazy loading -->
         <div class="absolute inset-0 z-0">
             <img 
-                src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" 
+                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Crect width='100' height='100' fill='%23e5e7eb'/%3E%3C/svg%3E"
+                data-src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
                 alt="Technology background" 
-                class="object-cover w-full h-full"
+                class="object-cover w-full h-full lazy-load"
+                loading="lazy"
             />
         </div>
         
@@ -256,7 +290,7 @@
         </div>
     </section>
 
-    <!-- Video Section -->
+    <!-- Optimized Video Section -->
     <section class="py-24 bg-gray-50">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">See the Best Cloud Hosting for Non-Technical Users in Action</h2>
@@ -265,9 +299,18 @@
             </p>
             <div class="max-w-4xl mx-auto">
                 <div class="relative w-full" style="padding-bottom: 56.25%; height: 0;">
+                    <!-- YouTube Placeholder -->
+                    <div id="youtube-placeholder" class="absolute top-0 left-0 w-full h-full rounded-xl shadow-2xl youtube-placeholder flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <div class="text-2xl font-bold mb-2">Cloud Hosting Demo</div>
+                            <div class="text-sm opacity-80">Click to play video</div>
+                        </div>
+                    </div>
+                    <!-- Actual YouTube iframe (loaded on demand) -->
                     <iframe 
-                        class="absolute top-0 left-0 w-full h-full rounded-xl shadow-2xl"
-                        src="https://www.youtube.com/embed/WWtG4urcMeo" 
+                        id="youtube-iframe"
+                        class="absolute top-0 left-0 w-full h-full rounded-xl shadow-2xl hidden"
+                        data-src="https://www.youtube.com/embed/WWtG4urcMeo?autoplay=1" 
                         title="CloudHost - Best Cloud Hosting for Non-Technical Users & Agencies 2025"
                         frameborder="0" 
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -512,8 +555,9 @@
     <!-- CTA Section -->
     <section class="py-24 bg-blue-600 relative overflow-hidden">
         <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" 
-                 class="object-cover w-full h-full opacity-10" alt="Background">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Crect width='100' height='100' fill='%234f46e5'/%3E%3C/svg%3E"
+                 data-src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" 
+                 class="object-cover w-full h-full opacity-10 lazy-load" alt="Background" loading="lazy">
         </div>
         <div class="container mx-auto px-6 text-center relative z-10">
             <h2 class="text-3xl md:text-4xl font-bold text-white mb-8">Ready to Experience the Best Cloud Hosting for Non-Technical Users & Agencies 2025?</h2>
@@ -529,6 +573,21 @@
     <!-- Footer -->
     <footer class="bg-gray-900 text-gray-300 py-16">
         <div class="container mx-auto px-6">
+            <!-- Affiliate Disclosure -->
+            <div class="bg-gray-800 rounded-lg p-6 mb-12 border-l-4 border-blue-500">
+                <div class="flex items-start">
+                    <div class="flex-shrink-0">
+                        <i class="fas fa-info-circle text-blue-400 text-xl mt-1"></i>
+                    </div>
+                    <div class="ml-3">
+                        <h4 class="text-lg font-semibold text-white mb-2">Affiliate Disclosure</h4>
+                        <p class="text-gray-300 text-sm leading-relaxed">
+                            <strong>FTC Disclosure:</strong> This website contains affiliate links. When you click on links to products or services and make a purchase, we may receive a commission at no additional cost to you. This helps support our website and allows us to continue providing valuable content about cloud hosting solutions. We only recommend products and services we genuinely believe will benefit our readers. Our reviews and recommendations are based on thorough research and honest evaluation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
                 <div>
                     <h3 class="text-2xl font-bold text-white mb-4">CloudHost - Best Cloud Hosting 2025</h3>
@@ -555,6 +614,7 @@
                     <ul class="space-y-2">
                         <li><a href="https://Benrgy.github.io/best-cloud-hosting-for-non-technical-users-agencies-2025-2025-05-23-bjtdc/privacy.html" class="hover:text-white transition-colors duration-300">Privacy Policy</a></li>
                         <li><a href="https://Benrgy.github.io/best-cloud-hosting-for-non-technical-users-agencies-2025-2025-05-23-bjtdc/terms.html" class="hover:text-white transition-colors duration-300">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Affiliate Disclosure</a></li>
                     </ul>
                 </div>
             </div>
@@ -565,6 +625,7 @@
     </footer>
 
     <script>
+        // Mobile menu functionality
         document.addEventListener('DOMContentLoaded', function() {
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
@@ -591,8 +652,36 @@
                     });
                 });
             }
+
+            // Lazy loading for images
+            const lazyImages = document.querySelectorAll('.lazy-load');
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.classList.remove('lazy-load');
+                        observer.unobserve(img);
+                    }
+                });
+            });
+
+            lazyImages.forEach(img => imageObserver.observe(img));
+
+            // YouTube lazy loading
+            const youtubePlaceholder = document.getElementById('youtube-placeholder');
+            const youtubeIframe = document.getElementById('youtube-iframe');
+            
+            if (youtubePlaceholder && youtubeIframe) {
+                youtubePlaceholder.addEventListener('click', function() {
+                    youtubeIframe.src = youtubeIframe.dataset.src;
+                    youtubePlaceholder.style.display = 'none';
+                    youtubeIframe.classList.remove('hidden');
+                });
+            }
         });
 
+        // Calculator function
         function calculateCosts() {
             const websites = parseInt(document.getElementById('websites').value);
             const traffic = parseInt(document.getElementById('traffic').value);
